@@ -26,4 +26,56 @@ public class UserValidation {
 
     }
 
+    @Test
+    public void testLastName(){
+
+        boolean isValid;
+
+        isValid = user.checkLastName("Krishna");
+
+        System.out.println(isValid);
+
+        Assertions.assertTrue(isValid);
+
+    }
+
+    @Test
+    public void testEmail(){
+
+        boolean isValid;
+
+        isValid = user.checkEmail("Krishna@gmail.com");
+
+        System.out.println(isValid);
+
+        Assertions.assertTrue(isValid);
+
+    }
+
+    @Test
+    public void testMobileNum(){
+
+        boolean isValid;
+
+        isValid = user.checkMobileNum("7569918165");
+
+        System.out.println(isValid);
+
+        Assertions.assertTrue(isValid);
+
+    }
+
+    @Test
+    public void testPassword(){
+
+        boolean isValid;
+
+        isValid = user.checkPassword("krishFna123hfy");
+
+        System.out.println(isValid);
+
+        Assertions.assertTrue(isValid);
+
+    }
+
 }
