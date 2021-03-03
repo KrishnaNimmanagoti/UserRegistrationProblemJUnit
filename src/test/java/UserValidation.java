@@ -52,7 +52,7 @@ public class UserValidation {
         System.out.println(result);
         Assertions.assertFalse(result);
     }
-
+  
     @Test
     public void testMobileNumHappy() {
         result = user.checkMobileNum("7569918165");
