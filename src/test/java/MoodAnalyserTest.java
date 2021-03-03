@@ -20,4 +20,11 @@ public class MoodAnalyserTest {
 
     }
 
+    @Test
+    public void testHappyMood(){
+
+        System.out.println(mood.analyseMood("I am in happy mood"));
+
+    }
+
 }
