@@ -39,4 +39,17 @@ public class UserValidation {
 
     }
 
+    @Test
+    public void testEmail(){
+
+        boolean isValid;
+
+        isValid = user.checkEmail("Krishna@gmail.com");
+
+        System.out.println(isValid);
+
+        Assertions.assertTrue(isValid);
+
+    }
+
 }
