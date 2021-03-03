@@ -26,4 +26,17 @@ public class UserValidation {
 
     }
 
+    @Test
+    public void testLastName(){
+
+        boolean isValid;
+
+        isValid = user.checkLastName("Krishna");
+
+        System.out.println(isValid);
+
+        Assertions.assertTrue(isValid);
+
+    }
+
 }
