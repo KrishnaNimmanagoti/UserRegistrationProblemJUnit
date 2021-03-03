@@ -70,7 +70,7 @@ public class UserValidation {
 
         boolean isValid;
 
-        isValid = user.checkPassword("krishFnahfy");
+        isValid = user.checkPassword("krishFna123hfy");
 
         System.out.println(isValid);
 
