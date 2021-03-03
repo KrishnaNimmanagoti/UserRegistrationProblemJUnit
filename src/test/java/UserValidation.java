@@ -52,4 +52,17 @@ public class UserValidation {
 
     }
 
+    @Test
+    public void testMobileNum(){
+
+        boolean isValid;
+
+        isValid = user.checkMobileNum("7569918165");
+
+        System.out.println(isValid);
+
+        Assertions.assertTrue(isValid);
+
+    }
+
 }
