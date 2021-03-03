@@ -6,24 +6,12 @@ public class MoodAnalyserTest {
 
     MoodAnalyser mood;
 
-    @BeforeEach
-    public void objectMethod(){
-
-        mood = new MoodAnalyser();
-
-    }
-
     @Test
     public void testSadMood(){
 
-        System.out.println(mood.analyseMood("I am in sad mood"));
+        mood = new MoodAnalyser("I am in sad mood");
 
-    }
-
-    @Test
-    public void testHappyMood(){
-
-        System.out.println(mood.analyseMood("I am in happy mood"));
+        System.out.println(mood.analyseMood());
 
     }
 
