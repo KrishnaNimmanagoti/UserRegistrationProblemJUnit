@@ -40,5 +40,17 @@ public class UserRegistration {
 
     }
 
+    public void checkException(boolean result){
+
+        try {
+            if (result == false)
+                throw new CustomException("Invalid Entry");
+        }
+        catch(CustomException e) {
+            System.out.println(e);
+        }
+
+    }
+
 
 }
