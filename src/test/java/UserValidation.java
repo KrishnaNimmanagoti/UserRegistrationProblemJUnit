@@ -18,14 +18,14 @@ public class UserValidation {
     @Test
     public void testFirstNameHappy(){
 
-        result = user.checkFirstName("Krishna");
+        result = user.checkFirstName.validate("Krishna");
         user.checkException(result);
 
     }
     @Test
     public void testFirstNameSad(){
 
-        result = user.checkFirstName("Kr");
+        result = user.checkFirstName.validate("kr");
         user.checkException(result);
 
     }
@@ -33,14 +33,14 @@ public class UserValidation {
     @Test
      public void testLastNameHappy() {
 
-        result = user.checkLastName("Krishna");
+        result = user.checkLastName.validate("Krishna");
         user.checkException(result);
 
     }
     @Test
     public void testLastNameSad(){
 
-        result = user.checkLastName("Kr");
+        result = user.checkLastName.validate("kr");
         user.checkException(result);
 
     }
@@ -48,14 +48,14 @@ public class UserValidation {
     @Test
     public void testEmailHappy(){
 
-        result = user.checkEmail("abc111@abc.com");
+        result = user.checkEmail.validate("abc111@abc.com");
         user.checkException(result);
 
     }
     @Test
     public void testEmailSad(){
 
-        result = user.checkEmail("Krishnagmail.com");
+        result = user.checkEmail.validate("abc111@a@bc.com");
         user.checkException(result);
 
     }
@@ -63,14 +63,14 @@ public class UserValidation {
     @Test
     public void testMobileNumHappy() {
 
-        result = user.checkMobileNum("7569918165");
+        result = user.checkMobileNum.validate("7569918165");
         user.checkException(result);
 
     }
     @Test
     public void testMobileNumSad() {
 
-        result = user.checkMobileNum("007569918165");
+        result = user.checkMobileNum.validate("0000000");
         user.checkException(result);
 
     }
@@ -78,14 +78,14 @@ public class UserValidation {
     @Test
     public void testPasswordHappy() {
 
-        result = user.checkPassword("Krishna@123");
+        result = user.checkPassword.validate("Krishn@123");
         user.checkException(result);
 
     }
     @Test
     public void testPasswordSad() {
 
-        result = user.checkPassword("krishna123A@@SasD");
+        result = user.checkPassword.validate("krishna");
         user.checkException(result);
 
     }
@@ -100,7 +100,7 @@ public class UserValidation {
 
         for (String emailIDs : allEmails) {
 
-            result = user.checkEmail(emailIDs);
+            result = user.checkEmail.validate(emailIDs);
             user.checkException(result);
 
         }
@@ -114,7 +114,7 @@ public class UserValidation {
 
         for (String emailIDs: allEmails) {
 
-            result = user.checkEmail(emailIDs);
+            result = user.checkEmail.validate(emailIDs);
             user.checkException(result);
 
         }

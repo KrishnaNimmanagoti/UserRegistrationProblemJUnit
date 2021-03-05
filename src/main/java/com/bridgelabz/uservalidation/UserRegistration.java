@@ -10,35 +10,12 @@ public class UserRegistration {
     private static String mobile = "([0-9]{2}[ ]|0)?[6-9][0-9]{9}";
     private static String userPassword = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}";
 
-    public boolean checkFirstName(String firstName){
 
-        return Pattern.matches(first_Name, firstName);
-
-    }
-
-    public boolean checkLastName(String lastName){
-
-        return Pattern.matches(last_Name, lastName);
-
-    }
-
-    public boolean checkEmail(String email){
-
-        return Pattern.matches(emailID, email);
-
-    }
-
-    public boolean checkMobileNum(String mobileNum){
-
-        return Pattern.matches(mobile, mobileNum);
-
-    }
-
-    public boolean checkPassword(String password){
-
-        return Pattern.matches(userPassword, password);
-
-    }
+    public IUserRegistrationDeclaraetion checkFirstName = (userInput) -> Pattern.matches(first_Name, userInput);
+    public IUserRegistrationDeclaraetion checkLastName = (userInput) -> Pattern.matches(last_Name, userInput);
+    public IUserRegistrationDeclaraetion checkEmail = (userInput) -> Pattern.matches(emailID, userInput);
+    public IUserRegistrationDeclaraetion checkMobileNum = (userInput) -> Pattern.matches(mobile, userInput);
+    public IUserRegistrationDeclaraetion checkPassword = (userInput) -> Pattern.matches(userPassword, userInput);
 
     public void checkException(boolean result){
 
